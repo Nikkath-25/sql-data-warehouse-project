@@ -58,8 +58,11 @@ Raw CRM and ERP data is ingested from CSV files, cleaned and standardized in mul
     - [Gold layer fact/dimension table scripts will go here](sql_scripts/gold/)
 
 - **diagrams**
-  - [data_flow_diagram.drawio](diagrams/data_flow_diagram.drawio)
-  - [data_flow_diagram.png](diagrams/data_flow_diagram.png)
+  - [Data Flow Diagram (drawio)](Diagrams/Data_Flow_Diagram.drawio)
+- ![Data Flow Diagram (png)](Diagrams/Data_Flow_Diagram.png)
+
+- [Data Integration Model (Silver) (drawio)](Diagrams/Data_Integration_Model(Silver).drawio)
+- ![Data Integration Model (Silver) (png)](Diagrams/Data_Integration_Model(Silver).png)
 
 - [README.md](README.md)
 
