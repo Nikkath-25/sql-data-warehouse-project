@@ -16,6 +16,7 @@ Raw CRM and ERP data is ingested from CSV files, cleaned and standardized in mul
 
 ---
 
+'''
 ## 📂 Project Structure
 
 Bronze_Silver_Gold_ETL_Project/
@@ -63,10 +64,9 @@ Bronze_Silver_Gold_ETL_Project/
 │
 └── README.md
 
-pgsql
-Copy code
 
 ---
+'''
 
 ## 🧪 Silver Layer Transformations
 
