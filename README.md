@@ -21,11 +21,11 @@ Raw CRM and ERP data is ingested from CSV files, cleaned and standardized in mul
 
 - **data**
   - [crm_cust_info.csv](data/bronze.crm_cust_info.csv)
-  - [crm_prd_info.csv](data/crm_prd_info.csv)
-  - [crm_sales_details.csv](data/crm_sales_details.csv)
-  - [erp_cust_az12.csv](data/erp_cust_az12.csv)
-  - [erp_loc_a101.csv](data/erp_loc_a101.csv)
-  - [er_px_cat_g1v2.csv](data/er_px_cat_g1v2.csv)
+  - [crm_prd_info.csv](data/bronze.crm_prd_info.csv)
+  - [crm_sales_details.csv](data/bronze.crm_sales_details.csv)
+  - [erp_cust_az12.csv](data/bronze.erp_cust_az12.csv)
+  - [erp_loc_a101.csv](data/bronze.erp_loc_a101.csv)
+  - [er_px_cat_g1v2.csv](data/bronze.erp_px_cat_g1v2.csv)
 
 - **sql_scripts**
   - **bronze**
