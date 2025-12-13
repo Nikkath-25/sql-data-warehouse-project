@@ -16,7 +16,6 @@ Raw CRM and ERP data is ingested from CSV files, cleaned and standardized in mul
 
 ---
 
-```
 ## Project Structure
 
 - **data**
@@ -43,7 +42,6 @@ Raw CRM and ERP data is ingested from CSV files, cleaned and standardized in mul
   - [data_flow_diagram.png](diagrams/data_flow_diagram.png)
 
 - [README.md](README.md)
-```
 
 ---
 
