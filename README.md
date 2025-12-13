@@ -18,7 +18,6 @@ SQL best practices
 
 Version control using Git
 
-📂 Project Structure
 Bronze_Silver_Gold_ETL_Project/
 │
 ├── data/
@@ -63,6 +62,7 @@ Bronze_Silver_Gold_ETL_Project/
 │   └── data_flow_diagram.png
 │
 └── README.md
+
 
 🧪 Silver Layer Transformations
 Table: crm_cust_info
