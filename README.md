@@ -74,7 +74,9 @@ validate_erp_loc_a101.sql
 
 validate_er_px_cat_g1v2.sql
 
+
 🧪 Silver Layer Transformations
+
 Table: crm_cust_info
 
 Removed unwanted spaces by trimming first name and last name.
