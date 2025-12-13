@@ -21,6 +21,7 @@ SQL best practices
 Version control using Git
 
 📂 Project Structure (with clickable links)
+
 🥉 Bronze Layer (Raw Data)
 
 create_bronze_tables.sql
