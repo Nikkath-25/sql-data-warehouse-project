@@ -16,6 +16,7 @@ Raw CRM and ERP data is ingested from CSV files, cleaned and standardized in mul
 
 ---
 
+
 ## Project Structure
 
 - **data**
@@ -30,12 +31,31 @@ Raw CRM and ERP data is ingested from CSV files, cleaned and standardized in mul
   - **bronze**
     - [create_bronze_tables.sql](sql_scripts/bronze/create_bronze_tables.sql)
     - [load_bronze_data.sql](sql_scripts/bronze/load_bronze_data.sql)
-    - ...
+    - [validate_crm_cust_info.sql](sql_scripts/bronze/validate_crm_cust_info.sql)
+    - [validate_crm_prd_info.sql](sql_scripts/bronze/validate_crm_prd_info.sql)
+    - [validate_crm_sales_details.sql](sql_scripts/bronze/validate_crm_sales_details.sql)
+    - [validate_erp_cust_az12.sql](sql_scripts/bronze/validate_erp_cust_az12.sql)
+    - [validate_erp_loc_a101.sql](sql_scripts/bronze/validate_erp_loc_a101.sql)
+    - [validate_er_px_cat_g1v2.sql](sql_scripts/bronze/validate_er_px_cat_g1v2.sql)
+
   - **silver**
     - [create_silver_tables.sql](sql_scripts/silver/create_silver_tables.sql)
-    - ...
+    - [silver_transform_crm_cust_info.sql](sql_scripts/silver/silver_transform_crm_cust_info.sql)
+    - [silver_transform_crm_prd_info.sql](sql_scripts/silver/silver_transform_crm_prd_info.sql)
+    - [silver_transform_crm_sales_details.sql](sql_scripts/silver/silver_transform_crm_sales_details.sql)
+    - [silver_transform_erp_cust_az12.sql](sql_scripts/silver/silver_transform_erp_cust_az12.sql)
+    - [silver_transform_erp_loc_a101.sql](sql_scripts/silver/silver_transform_erp_loc_a101.sql)
+    - [silver_transform_er_px_cat_g1v2.sql](sql_scripts/silver/silver_transform_er_px_cat_g1v2.sql)
+    - [validate_crm_cust_info.sql](sql_scripts/silver/validate_crm_cust_info.sql)
+    - [validate_crm_prd_info.sql](sql_scripts/silver/validate_crm_prd_info.sql)
+    - [validate_crm_sales_details.sql](sql_scripts/silver/validate_crm_sales_details.sql)
+    - [validate_erp_cust_az12.sql](sql_scripts/silver/validate_erp_cust_az12.sql)
+    - [validate_erp_loc_a101.sql](sql_scripts/silver/validate_erp_loc_a101.sql)
+    - [validate_er_px_cat_g1v2.sql](sql_scripts/silver/validate_er_px_cat_g1v2.sql)
+
   - **gold**
     - (in progress)
+    - [Gold layer fact/dimension table scripts will go here](sql_scripts/gold/)
 
 - **diagrams**
   - [data_flow_diagram.drawio](diagrams/data_flow_diagram.drawio)
