@@ -1,3 +1,5 @@
+📊 Bronze–Silver–Gold ETL Data Warehouse Project (MySQL)
+
 📌 Project Overview
 
 This project simulates a real-world data warehousing and ETL process using a Bronze–Silver–Gold architecture.
