@@ -20,7 +20,7 @@ Raw CRM and ERP data is ingested from CSV files, cleaned and standardized in mul
 ## Project Structure
 
 - **data**
-  - [crm_cust_info.csv]("C:/Data Analyst/Projects/Bronze_Silver_Gold_ETL_Project/data/bronze.crm_cust_info.csv")
+  - [crm_cust_info.csv](data/bronze.crm_cust_info.csv)
   - [crm_prd_info.csv](data/crm_prd_info.csv)
   - [crm_sales_details.csv](data/crm_sales_details.csv)
   - [erp_cust_az12.csv](data/erp_cust_az12.csv)
