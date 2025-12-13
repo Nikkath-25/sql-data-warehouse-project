@@ -29,14 +29,14 @@ Raw CRM and ERP data is ingested from CSV files, cleaned and standardized in mul
 
 - **sql_scripts**
   - **bronze**
-    - [create_bronze_tables.sql](sql_scripts/bronze/create_bronze_tables.sql)
-    - [load_bronze_data.sql](sql_scripts/bronze/load_bronze_data.sql)
-    - [validate_crm_cust_info.sql](sql_scripts/bronze/validate_crm_cust_info.sql)
-    - [validate_crm_prd_info.sql](sql_scripts/bronze/validate_crm_prd_info.sql)
-    - [validate_crm_sales_details.sql](sql_scripts/bronze/validate_crm_sales_details.sql)
-    - [validate_erp_cust_az12.sql](sql_scripts/bronze/validate_erp_cust_az12.sql)
-    - [validate_erp_loc_a101.sql](sql_scripts/bronze/validate_erp_loc_a101.sql)
-    - [validate_er_px_cat_g1v2.sql](sql_scripts/bronze/validate_er_px_cat_g1v2.sql)
+    - [create_bronze_tables.sql](sql_scripts/Bronze/create_bronze_tables.sql)
+    - [load_bronze_data.sql](sql_scripts/Bronze/load_bronze_data.sql)
+    - [validate_crm_cust_info.sql](sql_scripts/Bronze/validate_crm_cust_info.sql)
+    - [validate_crm_prd_info.sql](sql_scripts/Bronze/validate_crm_prd_info.sql)
+    - [validate_crm_sales_details.sql](sql_scripts/Bronze/validate_crm_sales_details.sql)
+    - [validate_erp_cust_az12.sql](sql_scripts/Bronze/validate_erp_cust_az12.sql)
+    - [validate_erp_loc_a101.sql](sql_scripts/Bronze/validate_erp_loc_a101.sql)
+    - [validate_er_px_cat_g1v2.sql](sql_scripts/Bronze/validate_er_px_cat_g1v2.sql)
 
   - **silver**
     - [create_silver_tables.sql](sql_scripts/silver/create_silver_tables.sql)
