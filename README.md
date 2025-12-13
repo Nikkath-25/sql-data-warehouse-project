@@ -14,13 +14,9 @@ Raw CRM and ERP data is ingested from CSV files, cleaned and standardized in mul
 - SQL best practices
 - Version control using Git
 
+## Project Structure
 ---
-
-'''
-## 📂 Project Structure
-
 Bronze_Silver_Gold_ETL_Project/
-│
 ├── data/
 │ ├── crm_cust_info.csv
 │ ├── crm_prd_info.csv
@@ -28,7 +24,6 @@ Bronze_Silver_Gold_ETL_Project/
 │ ├── erp_cust_az12.csv
 │ ├── erp_loc_a101.csv
 │ └── er_px_cat_g1v2.csv
-│
 ├── sql_scripts/
 │ ├── bronze/
 │ │ ├── create_bronze_tables.sql
@@ -39,7 +34,6 @@ Bronze_Silver_Gold_ETL_Project/
 │ │ ├── validate_erp_cust_az12.sql
 │ │ ├── validate_erp_loc_a101.sql
 │ │ └── validate_er_px_cat_g1v2.sql
-│ │
 │ ├── silver/
 │ │ ├── create_silver_tables.sql
 │ │ ├── silver_transform_crm_cust_info.sql
@@ -54,19 +48,14 @@ Bronze_Silver_Gold_ETL_Project/
 │ │ ├── validate_erp_cust_az12.sql
 │ │ ├── validate_erp_loc_a101.sql
 │ │ └── validate_er_px_cat_g1v2.sql
-│ │
 │ └── gold/
 │ └── (in progress)
-│
 ├── diagrams/
 │ ├── data_flow_diagram.drawio
 │ └── data_flow_diagram.png
-│
 └── README.md
 
-
 ---
-'''
 
 ## 🧪 Silver Layer Transformations
 
