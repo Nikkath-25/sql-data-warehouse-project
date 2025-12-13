@@ -14,46 +14,48 @@ Raw CRM and ERP data is ingested from CSV files, cleaned and standardized in mul
 - SQL best practices
 - Version control using Git
 
-## Project Structure
 ---
+
+## Project Structure
+
 Bronze_Silver_Gold_ETL_Project/
-├── data/
-│ ├── crm_cust_info.csv
-│ ├── crm_prd_info.csv
-│ ├── crm_sales_details.csv
-│ ├── erp_cust_az12.csv
-│ ├── erp_loc_a101.csv
-│ └── er_px_cat_g1v2.csv
-├── sql_scripts/
-│ ├── bronze/
-│ │ ├── create_bronze_tables.sql
-│ │ ├── load_bronze_data.sql
-│ │ ├── validate_crm_cust_info.sql
-│ │ ├── validate_crm_prd_info.sql
-│ │ ├── validate_crm_sales_details.sql
-│ │ ├── validate_erp_cust_az12.sql
-│ │ ├── validate_erp_loc_a101.sql
-│ │ └── validate_er_px_cat_g1v2.sql
-│ ├── silver/
-│ │ ├── create_silver_tables.sql
-│ │ ├── silver_transform_crm_cust_info.sql
-│ │ ├── silver_transform_crm_prd_info.sql
-│ │ ├── silver_transform_crm_sales_details.sql
-│ │ ├── silver_transform_erp_cust_az12.sql
-│ │ ├── silver_transform_erp_loc_a101.sql
-│ │ ├── silver_transform_er_px_cat_g1v2.sql
-│ │ ├── validate_crm_cust_info.sql
-│ │ ├── validate_crm_prd_info.sql
-│ │ ├── validate_crm_sales_details.sql
-│ │ ├── validate_erp_cust_az12.sql
-│ │ ├── validate_erp_loc_a101.sql
-│ │ └── validate_er_px_cat_g1v2.sql
-│ └── gold/
-│ └── (in progress)
-├── diagrams/
-│ ├── data_flow_diagram.drawio
-│ └── data_flow_diagram.png
-└── README.md
+├── [data](data/)
+│   ├── [crm_cust_info.csv](data/crm_cust_info.csv)
+│   ├── [crm_prd_info.csv](data/crm_prd_info.csv)
+│   ├── [crm_sales_details.csv](data/crm_sales_details.csv)
+│   ├── [erp_cust_az12.csv](data/erp_cust_az12.csv)
+│   ├── [erp_loc_a101.csv](data/erp_loc_a101.csv)
+│   └── [er_px_cat_g1v2.csv](data/er_px_cat_g1v2.csv)
+├── [sql_scripts](sql_scripts/)
+│   ├── [bronze](sql_scripts/bronze/)
+│   │   ├── [create_bronze_tables.sql](sql_scripts/bronze/create_bronze_tables.sql)
+│   │   ├── [load_bronze_data.sql](sql_scripts/bronze/load_bronze_data.sql)
+│   │   ├── [validate_crm_cust_info.sql](sql_scripts/bronze/validate_crm_cust_info.sql)
+│   │   ├── [validate_crm_prd_info.sql](sql_scripts/bronze/validate_crm_prd_info.sql)
+│   │   ├── [validate_crm_sales_details.sql](sql_scripts/bronze/validate_crm_sales_details.sql)
+│   │   ├── [validate_erp_cust_az12.sql](sql_scripts/bronze/validate_erp_cust_az12.sql)
+│   │   ├── [validate_erp_loc_a101.sql](sql_scripts/bronze/validate_erp_loc_a101.sql)
+│   │   └── [validate_er_px_cat_g1v2.sql](sql_scripts/bronze/validate_er_px_cat_g1v2.sql)
+│   ├── [silver](sql_scripts/silver/)
+│   │   ├── [create_silver_tables.sql](sql_scripts/silver/create_silver_tables.sql)
+│   │   ├── [silver_transform_crm_cust_info.sql](sql_scripts/silver/silver_transform_crm_cust_info.sql)
+│   │   ├── [silver_transform_crm_prd_info.sql](sql_scripts/silver/silver_transform_crm_prd_info.sql)
+│   │   ├── [silver_transform_crm_sales_details.sql](sql_scripts/silver/silver_transform_crm_sales_details.sql)
+│   │   ├── [silver_transform_erp_cust_az12.sql](sql_scripts/silver/silver_transform_erp_cust_az12.sql)
+│   │   ├── [silver_transform_erp_loc_a101.sql](sql_scripts/silver/silver_transform_erp_loc_a101.sql)
+│   │   ├── [silver_transform_er_px_cat_g1v2.sql](sql_scripts/silver/silver_transform_er_px_cat_g1v2.sql)
+│   │   ├── [validate_crm_cust_info.sql](sql_scripts/silver/validate_crm_cust_info.sql)
+│   │   ├── [validate_crm_prd_info.sql](sql_scripts/silver/validate_crm_prd_info.sql)
+│   │   ├── [validate_crm_sales_details.sql](sql_scripts/silver/validate_crm_sales_details.sql)
+│   │   ├── [validate_erp_cust_az12.sql](sql_scripts/silver/validate_erp_cust_az12.sql)
+│   │   ├── [validate_erp_loc_a101.sql](sql_scripts/silver/validate_erp_loc_a101.sql)
+│   │   └── [validate_er_px_cat_g1v2.sql](sql_scripts/silver/validate_er_px_cat_g1v2.sql)
+│   └── [gold](sql_scripts/gold/)
+│       └── (in progress)
+├── [diagrams](diagrams/)
+│   ├── [data_flow_diagram.drawio](diagrams/data_flow_diagram.drawio)
+│   └── [data_flow_diagram.png](diagrams/data_flow_diagram.png)
+└── [README.md](README.md)
 
 ---
 
