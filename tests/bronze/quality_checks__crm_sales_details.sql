@@ -1,4 +1,28 @@
-#Check for Unwanted Spaces
+/*
+===============================================================================================
+Quality Checks
+===============================================================================================
+Script Purpose:
+	This script performs various quality checks for data consistency, accuracy, and 
+    standardization across the 'bronze_layer' database. It includes checks for:
+    - Null or duplicate primary keys.
+    - Unwanted spaces in string fields. 
+    - Data standardization and consistency. 
+    - Invalid date ranges and orders.
+    - Data consistency between related fields.
+
+Usage Notes:
+	- Run these checks before transforming the data in silver_layer.
+    - Use the results to guide the required transformations in the silver_layer.
+===============================================================================================
+*/
+
+-- ============================================================================================
+-- Checking 'bronze_layer.crm_sales_details'
+-- ============================================================================================
+
+-- Check for Unwanted Spaces
+
 select sls_ord_num
 from bronze_layer.crm_sales_details
 where sls_ord_num!=TRIM(sls_ord_num);
@@ -7,8 +31,8 @@ select sls_prd_key
 from bronze_layer.crm_sales_details
 where sls_prd_key!=TRIM(sls_prd_key);
 
-#prdouct key & customer id are keys that connect with other tables, 
-#so we need to check the integrity of those columns
+-- prdouct key & customer id are keys that connect with other tables, 
+-- so we need to check the integrity of those columns
 
 select sls_prd_key
 from bronze_layer.crm_sales_details
@@ -18,7 +42,8 @@ select sls_cust_id
 from bronze_layer.crm_sales_details
 where sls_cust_id NOT IN (select cst_id from silver_layer.crm_cust_info);
 
-#Check for Invalid Dates
+-- Check for Invalid Dates
+
 select 
 sls_order_dt
 from bronze_layer.crm_sales_details
@@ -43,8 +68,9 @@ or length(sls_due_dt) != 8
 or sls_due_dt > 20500101
 or sls_due_dt < 19000101; 
 
-#Invalid Date Orders
-#Order Date should be earlier than Ship Date and Due Date
+-- Invalid Date Orders
+-- Order Date should be earlier than Ship Date and Due Date
+
 select 
 * 
 from bronze_layer.crm_sales_details
@@ -52,9 +78,9 @@ where sls_order_dt > sls_ship_dt
 or sls_order_dt > sls_due_dt
 or sls_ship_dt > sls_due_dt;
 
-#Check Data Consistency : Between Sales, Quantity & Price 
-#Sales = Quantity * Price
-#Negatives,Zeros,NULLs are Not Allowed
+-- Check Data Consistency : Between Sales, Quantity & Price 
+-- Sales = Quantity * Price
+-- Negatives,Zeros,NULLs are Not Allowed
 
 select distinct
 sls_sales,
@@ -65,11 +91,13 @@ where sls_sales != sls_quantity * sls_price
 or sls_sales <= 0 or sls_quantity <= 0 or sls_price <= 0
 or sls_sales IS NULL or sls_quantity IS NULL or sls_price IS NULL
 order by sls_sales,sls_quantity,sls_price;
-#here we need to talk to source system about the bad data and ask for support and rules.
-#Rules:
-#1. If Sales is negative,zero, or null derive it using Quantity and Price
-#2. If Price is zero or null, calculate it using Sales and Quantity
-#3. If Price is negative, convert it to a positive value
+/*
+here we need to talk to source system about the bad data and ask for support and rules.
+Rules:
+1. If Sales is negative,zero, or null derive it using Quantity and Price
+2. If Price is zero or null, calculate it using Sales and Quantity
+3. If Price is negative, convert it to a positive value
+*/
 
 select distinct
 sls_sales as old_sls_sales ,

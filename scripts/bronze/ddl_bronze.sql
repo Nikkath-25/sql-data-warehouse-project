@@ -1,5 +1,16 @@
-#create database bronze_layer;
-#use bronze_layer;
+/*
+========================================================================================
+DDL Script: Create Bronze Tables
+========================================================================================
+Script Purpose:
+	This script creates tables in the 'bronze_layer' database, dropping existing tables
+    if they already exist.
+    Run this script to re-define the DDL structure of 'bronze_layer' tables
+========================================================================================
+*/
+
+use bronze_layer;
+
 drop table if exists crm_cust_info;
 create table crm_cust_info(
 cst_id INT,

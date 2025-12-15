@@ -1,20 +1,65 @@
-# 📊 Bronze–Silver–Gold ETL Data Warehouse Project (MySQL)
+# Data Warehouse and Analytics Project
 
-## 📌 Project Overview
-This project simulates a **real-world data warehousing and ETL process** using a **Bronze–Silver–Gold architecture**. 
+Welcome to the **Data Warehouse and Analytics Project** repository! 🚀
+This project demonstrates a comprehensive data warehousing and analytics solution, from building a data warehouse to generating actionable insights. Designed as a portfolio project highlights best practices in data engineering and analytics.
 
-Demonstrates data cleaning, transformation, and aggregation from raw CSVs to business-ready tables.
-
-Raw CRM and ERP data is ingested from CSV files, cleaned and standardized in multiple layers, and prepared for analytical reporting.
-
-**Key goals:**
-- Data ingestion and validation
-- Data cleaning and transformation
-- Layered data modeling
-- SQL best practices
-- Version control using Git
 
 ---
+
+
+## 🚀 Project Requirements
+
+
+### Building the Data Warehouse (Data Engineering)
+
+
+#### Objective
+
+Develop a modern data warehouse using SQL Server to consolidate sales data,enabling analytical reporting and informed decision-making.
+
+
+#### Specifications
+
+- **Data Sources**: Import data from two source systems (ERP and CRM) provide as CSV files.
+
+- **Data Quality**: Cleanse and resolve data quality issues prior to analysis.
+
+- **Integration**: Combine both sources into a single, user-friendly data model designed for analytical queries.
+
+- **Scope**: Focus on the latest dataset only; historization of data is not required.
+
+- **Documentation**: Provide clear documentaion of the data model to support both business stakeholders and analytics tyeams.
+
+
+---
+
+
+### BI: Analytics & Reporting (Data Analytics)
+
+
+#### Objective
+Develop SQL-based analytics to deliver detailed insights into:
+
+- **Customer Behavior**
+
+- **Product Performance**
+
+-**Sales Trends**
+
+
+These insights empower stakeholders with key business metrics, enabling strategic decision-making.
+
+---
+
+
+## 🛡️ License
+
+
+This Project is licensed under the [MIT License](LICENSE). You are free to use, modify, and share this project with proper attribution.
+
+## ⭐ About Me
+
+Hi there! I'm **Syed Naveen Nikkath**, an IT professional with experience in data analytics, skilled in SQL, Excel, Power BI, and Python basics. I enjoy working with data to generate insights and build meaningful analytics solutions.
 
 
 ## Project Structure

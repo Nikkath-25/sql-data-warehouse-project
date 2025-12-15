@@ -1,4 +1,14 @@
-#create database silver_layer;
+/*
+========================================================================================
+DDL Script: Create Silver Tables
+========================================================================================
+Script Purpose:
+	This script creates tables in the 'silver_layer' database, dropping existing tables
+    if they already exist.
+    Run this script to re-define the DDL structure of 'bronze_layer' tables
+========================================================================================
+*/
+
 use silver_layer;
 
 drop table if exists crm_cust_info;

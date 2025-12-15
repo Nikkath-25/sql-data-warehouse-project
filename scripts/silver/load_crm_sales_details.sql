@@ -1,18 +1,19 @@
-/*#tried to change the data types of order date,ship date and due date
-USE silver_layer;
-drop table if exists crm_sales_details;
-create table crm_sales_details(
-sls_ord_num VARCHAR(50),
-sls_prd_key VARCHAR(50),
-sls_cust_id INT,
-sls_order_dt DATE,
-sls_ship_dt DATE,
-sls_due_dt DATE,
-sls_sales INT,
-sls_quantity INT,
-sls_price INT,
-dwh_create_date DATETIME DEFAULT current_timestamp
-); */
+/*
+========================================================================================
+Load Silver Layer (Silver -> Bronze)
+========================================================================================
+Script Purpose:
+	This script performs the ETL (Extract, Transform, Load) process to populate the 'silver_layer'
+    database tables from the 'bronze_layer' database. 
+Actions Performed:
+	- Truncate silver_layer tables.
+    - Inserts transformed and cleansed data from bronze into silver tables.
+========================================================================================
+*/
+
+-- =====================================================================================
+-- Loading CRM Table: crm_sales_details
+-- =====================================================================================
 
 TRUNCATE TABLE silver_layer.crm_sales_details;
 
