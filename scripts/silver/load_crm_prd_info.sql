@@ -1,6 +1,6 @@
 /*
 ========================================================================================
-Load Silver Layer (Silver -> Bronze)
+Load Silver Layer (Bronze -> Silver)
 ========================================================================================
 Script Purpose:
 	This script performs the ETL (Extract, Transform, Load) process to populate the 'silver_layer'
