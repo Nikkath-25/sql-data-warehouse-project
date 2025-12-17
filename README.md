@@ -8,6 +8,17 @@ This project demonstrates a comprehensive data warehousing and analytics solutio
 ---
 
 
+## 📖 Project Overview 
+
+This Project involves:
+
+  1. Data Architecture: Designing a Modern Data Warehouse Using Medallion Architecture Bronze, Silver, and Gold layers.
+  2. ETL Pipelines: Extracting, transforming, and loading data from source systems into the warehouse.
+  3. Data Modeling: Developing fact and dimesion tables optimized for analytical queries.
+  4. Analytics & Reporting: Creating SQL-based reports and dashboards for actionable insights.
+
+---
+
 ## 🚀 Project Requirements
 
 
@@ -52,9 +63,93 @@ These insights empower stakeholders with key business metrics, enabling strategi
 
 ---
 
+## 📂 Repository Structure
+
+
+- **datasets**
+  - [crm_cust_info.csv](data/bronze.crm_cust_info.csv)
+  - [crm_prd_info.csv](data/bronze.crm_prd_info.csv)
+  - [crm_sales_details.csv](data/bronze.crm_sales_details.csv)
+  - [erp_cust_az12.csv](data/bronze.erp_cust_az12.csv)
+  - [erp_loc_a101.csv](data/bronze.erp_loc_a101.csv)
+  - [er_px_cat_g1v2.csv](data/bronze.erp_px_cat_g1v2.csv)
+
+- **scripts**
+  
+  - [init_database.sql](scripts/init_database.sql)
+
+    - **bronze**
+      - [ddl_bronze.sql](scripts/bronze/ddl_bronze.sql)
+      - [load_bronze.sql](scripts/bronze/load_bronze.sql)
+      
+   - **silver**
+      - [ddl_silver.sql](scripts/bronze/ddl_silver.sql)
+      - [load_crm_cust_info.sql](scripts/silver/load_crm_cust_info.sql)
+      - [load_crm_prd_info.sql](scripts/silver/load_crm_prd_info.sql)
+      - [load_crm_sales_details.sql](scripts/silver/load_crm_sales_details.sql)
+      - [load_erp_cust_az12.sql](scripts/silver/load_erp_cust_az12.sql)
+      - [load_erp_loc_a101.sql](scripts/silver/load_erp_loc_a101.sql)
+      - [load_erp_px_cat_g1v2.sql](scripts/silver/load_erp_px_cat_g1v2.sql)
+
+    - **gold**
+      - [ddl_gold_dim_customers](scripts/gold/ddl_gold_dim_customers.sql)
+      - [ddl_gold_dim_products](scripts/gold/ddl_gold_dim_products.sql)
+      - [ddl_gold_fact_sales](scripts/gold/ddl_gold_fact_sales.sql)
+
+- **tests**
+  
+  - **bronze**
+    - [quality_checks_crm_cust_info.sql](tests/bronze/quality_checks_crm_cust_info.sql)
+    - [quality_checks_crm_prd_info.sql](tests/bronze/quality_checks_crm_prd_info.sql)
+    - [quality_checks_crm_sales_details.sql](tests/bronze/quality_checks_crm_sales_details.sql)
+    - [quality_checks_erp_cust_az12.sql](tests/bronze/quality_checks_erp_cust_az12.sql)
+    - [quality_checks_erp_loc_a101.sql](tests/bronze/quality_checks_erp_loc_a101.sql)
+    - [quality_checks_erp_px_cat_g1v2.sql](tests/bronze/quality_checks_erp_px_cat_g1v2.sql)
+   
+      
+  - **silver**
+    - [quality_checks_crm_cust_info.sql](tests/silver/quality_checks_crm_cust_info.sql)
+    - [quality_checks_crm_prd_info.sql](tests/silver/quality_checks_crm_prd_info.sql)
+    - [quality_checks_crm_sales_details.sql](tests/silver/quality_checks_crm_sales_details.sql)
+    - [quality_checks_erp_cust_az12.sql](tests/silver/quality_checks_erp_cust_az12.sql)
+    - [quality_checks_erp_loc_a101.sql](tests/silver/quality_checks_erp_loc_a101.sql)
+    - [quality_checks_erp_px_cat_g1v2.sql](tests/silver/quality_checks_erp_px_cat_g1v2.sql)
+   
+
+  - **gold**
+    - [quality_checks_dim_customers](tests/gold/quality_checks_dim_customers.sql)
+    - [quality_checks_dim_products.sql](tests/gold/quality_checks_crm_dim_products.sql)
+    - [quality_checks_fact_sales.sql](tests/gold/quality_checks_crm_fact_sales.sql)
+
+- **docs**
+  - [data catalog (md)](docs/data_catalog.md)
+
+  - [Data Flow Diagram (drawio)](docs/Data_Flow_Diagram.drawio)
+  - ![Data Flow Diagram (png)](docs/Data_Flow_Diagram.png)
+
+  - [Data Integration Model (Silver) (drawio)](docs/Data_Integration_Model(Silver).drawio)
+  - ![Data Integration Model (Silver) (png)](docs/Data_Integration_Model(Silver).png)
+
+  - [Labelling Original Data Model (Gold) (drawio)](docs/Data_Integration_Model(Silver).drawio)
+  - ![Labelling Original Data Model (Gold) (png)](docs/Data_Integration_Model(Silver).png)
+ 
+  - [Gold Layer Sales Star Schema Model (drawio)](docs/Data_Integration_Model(Silver).drawio)
+  - ![Gold Layer Sales Star Schema Model (png)](docs/Data_Integration_Model(Silver).png)
+
+
+- [README.md](README.md)
+
+---
+
+## 🛠️ Technologies Used
+- MySQL 8.0 (DDL, DML, window functions, transformations)  
+- Git & GitHub  
+- VS Code (SQL scripts & CSV exploration)  
+- Draw.io (Data flow diagram)
+
+---
 
 ## 🛡️ License
-
 
 This Project is licensed under the [MIT License](LICENSE). You are free to use, modify, and share this project with proper attribution.
 
@@ -63,54 +158,6 @@ This Project is licensed under the [MIT License](LICENSE). You are free to use, 
 Hi there! I'm **Syed Naveen Nikkath**, an IT professional with experience in data analytics, skilled in SQL, Excel, Power BI, and Python basics. I enjoy working with data to generate insights and build meaningful analytics solutions.
 
 
-## Project Structure
-
-- **data**
-  - [crm_cust_info.csv](data/bronze.crm_cust_info.csv)
-  - [crm_prd_info.csv](data/bronze.crm_prd_info.csv)
-  - [crm_sales_details.csv](data/bronze.crm_sales_details.csv)
-  - [erp_cust_az12.csv](data/bronze.erp_cust_az12.csv)
-  - [erp_loc_a101.csv](data/bronze.erp_loc_a101.csv)
-  - [er_px_cat_g1v2.csv](data/bronze.erp_px_cat_g1v2.csv)
-
-- **sql_scripts**
-  - **bronze**
-    - [create_bronze_tables.sql](sql_scripts/Bronze/create_bronze_tables.sql)
-    - [load_bronze_data.sql](sql_scripts/Bronze/load_bronze_data.sql)
-    - [validate_crm_cust_info.sql](sql_scripts/Bronze/validate_crm_cust_info.sql)
-    - [validate_crm_prd_info.sql](sql_scripts/Bronze/validate_crm_prd_info.sql)
-    - [validate_crm_sales_details.sql](sql_scripts/Bronze/validate_crm_sales_details.sql)
-    - [validate_erp_cust_az12.sql](sql_scripts/Bronze/validate_erp_cust_az12.sql)
-    - [validate_erp_loc_a101.sql](sql_scripts/Bronze/validate_erp_loc_a101.sql)
-    - [validate_erp_px_cat_g1v2.sql](sql_scripts/Bronze/validate_erp_px_cat_g1v2.sql)
-
-  - **silver**
-    - [create_silver_tables.sql](sql_scripts/Silver/create_silver_tables.sql)
-    - [silver_transform_crm_cust_info.sql](sql_scripts/Silver/transform_crm_cust_info.sql)
-    - [silver_transform_crm_prd_info.sql](sql_scripts/Silver/transform_crm_prd_info.sql)
-    - [silver_transform_crm_sales_details.sql](sql_scripts/Silver/transform_crm_sales_details.sql)
-    - [silver_transform_erp_cust_az12.sql](sql_scripts/Silver/transform_erp_cust_az12.sql)
-    - [silver_transform_erp_loc_a101.sql](sql_scripts/Silver/transform_erp_loc_a101.sql)
-    - [silver_transform_erp_px_cat_g1v2.sql](sql_scripts/Silver/transform_erp_px_cat_g1v2.sql)
-    - [validate_crm_cust_info.sql](sql_scripts/Silver/validate_crm_cust_info.sql)
-    - [validate_crm_prd_info.sql](sql_scripts/Silver/validate_crm_prd_info.sql)
-    - [validate_crm_sales_details.sql](sql_scripts/Silver/validate_crm_sales_details.sql)
-    - [validate_erp_cust_az12.sql](sql_scripts/Silver/validate_erp_cust_az12.sql)
-    - [validate_erp_loc_a101.sql](sql_scripts/Silver/validate_erp_loc_a101.sql)
-    - [validate_erp_px_cat_g1v2.sql](sql_scripts/Silver/validate_erp_px_cat_g1v2.sql)
-
-  - **gold**
-    - (in progress)
-    - [Gold layer fact/dimension table scripts will go here](sql_scripts/gold/)
-
-- **diagrams**
-  - [Data Flow Diagram (drawio)](Diagrams/Data_Flow_Diagram.drawio)
-- ![Data Flow Diagram (png)](Diagrams/Data_Flow_Diagram.png)
-
-- [Data Integration Model (Silver) (drawio)](Diagrams/Data_Integration_Model(Silver).drawio)
-- ![Data Integration Model (Silver) (png)](Diagrams/Data_Integration_Model(Silver).png)
-
-- [README.md](README.md)
 
 ---
 
@@ -150,23 +197,3 @@ Hi there! I'm **Syed Naveen Nikkath**, an IT professional with experience in dat
 
 ---
 
-## 🛠️ Technologies Used
-- MySQL 8.0 (DDL, DML, window functions, transformations)  
-- Git & GitHub  
-- VS Code (SQL scripts & CSV exploration)  
-- Draw.io (Data flow diagram)
-
----
-
-## 🚧 Current Status
-- ✅ Bronze Layer completed  
-- ✅ Silver Layer completed  
-- 🚧 Gold Layer in progress (fact/dimension tables and joins pending)  
-
----
-
-## 📈 Next Steps
-1. Complete Gold layer with analytical tables.  
-2. Implement joins between customer, product, and sales data.  
-3. Add additional validations if required.  
-4. Update README and diagrams once Gold layer is done.  

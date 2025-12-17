@@ -1,24 +1,30 @@
-select * from gold_layer.dim_products;
+/*
+===============================================================================
+Quality checks
+===============================================================================
+Script Purpose:
+	This script performs quality checks to validate the integrity,consistency,
+    and accuracy of the Gold Layer. These checks ensure:
+    - Uniqueness of surrogate keys in dimension tables.
+    - Referential integrity between fact and dimension tables.
+    - Validation of relations in the data model for analytical purposes.alter
+    
+Usage Notes:
+	- Run these checks after data loading Gold Layer.
+    - Investigate and resolve any discrepancies found during the checks.
+================================================================================
+*/
 
-select prd_key,
-count(*)
-from
-(
-	select 
-	pi.prd_id,
-	pi.cat_id,
-	pi.prd_key,
-	pi.prd_nm,
-	pi.prd_cost,
-	pi.prd_line,
-	pi.prd_start_dt,
-	pi.prd_end_dt,
-	pc.cat,
-	pc.subcat,
-	pc.maintenance
-	from silver_layer.crm_prd_info pi
-	left join silver_layer.erp_px_cat_g1v2 pc
-	on pi.cat_id = pc.id
-	where prd_end_dt is null -- filter out all historical data
-)t group by prd_key
-having count(*) > 1;
+-- =================================================================
+-- Checking 'gold_layer.dim_products'
+-- =================================================================
+-- Check for Uniqueness of Product Key in gold_layer.dim_products
+-- Expectation: No results
+
+select 
+product_key,
+count(*) as duplicate_count
+from gold_layer.dim_products
+group by product_key
+having count(*) >1;
+

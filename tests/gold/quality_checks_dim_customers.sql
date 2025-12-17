@@ -1,4 +1,32 @@
-select * from gold_layer.dim_customers;
+/*
+===============================================================================
+Quality checks
+===============================================================================
+Script Purpose:
+	This script performs quality checks to validate the integrity,consistency,
+    and accuracy of the Gold Layer. These checks ensure:
+    - Uniqueness of surrogate keys in dimension tables.
+    - Referential integrity between fact and dimension tables.
+    - Validation of relations in the data model for analytical purposes.alter
+    
+Usage Notes:
+	- Run these checks after data loading Gold Layer.
+    - Investigate and resolve any discrepancies found during the checks.
+================================================================================
+*/
+
+-- =================================================================
+-- Checking 'gold_layer.dim_customers'
+-- =================================================================
+-- Check for Uniqueness of Customer Key in gold_layer.dim_customers
+-- Expectation: No results
+
+select 
+customer_key,
+count(*) as duplicate_count
+from gold_layer.dim_customers
+group by customer_key
+having count(*) >1;
 
 -- Data Standardization & Consistency
 
@@ -6,40 +34,3 @@ select distinct
 gender
 from gold_layer.dim_customers;
 
-SELECT
-cst_id,
-count(*)
-FROM
-(
-	SELECT 
-		ci.cst_id,
-		ci.cst_key,
-		ci.cst_firstname,
-		ci.cst_lastname,
-		ci.cst_marital_status,
-		ci.cst_gndr,
-		ci.cst_create_date,
-		ca.bdate,
-		ca.gen,
-		la.cntry
-	FROM silver_layer.crm_cust_info ci
-	LEFT JOIN silver_layer.erp_cust_az12 ca
-	ON ci.cst_key = ca.cid
-	LEFT JOIN silver_layer.erp_loc_a101 la
-	ON ci.cst_key = la.cid
-)t GROUP BY cst_id
-HAVING count(*) > 1;
-
-SELECT DISTINCT
-	ci.cst_gndr,
-	ca.gen,
-    CASE WHEN ci.cst_gndr!= 'n/a'
-    THEN ci.cst_gndr
-    ELSE COALESCE(ca.gen,'n/a')
-    END AS new_gen
-FROM silver_layer.crm_cust_info ci
-LEFT JOIN silver_layer.erp_cust_az12 ca
-ON ci.cst_key = ca.cid
-LEFT JOIN silver_layer.erp_loc_a101 la
-ON ci.cst_key = la.cid
-ORDER BY 1,2;

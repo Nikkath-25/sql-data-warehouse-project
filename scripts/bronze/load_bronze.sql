@@ -1,13 +1,13 @@
 /*
 ========================================================================================
-Load Bronze Layer (Source System -> Bronze)
+Load Bronze Layer (Source -> Bronze)
 ========================================================================================
 Script Purpose:
-	This script performs the EL (Extract, Load) process to populate the 'bronze_layer'
-    database tables from the Source System. 
-Actions Performed:
-	- Truncate bronze_layer tables.
-    - Loads data from the Source System(CRM & ERP) CSV files into bronze_layer tables.
+	This script loads data into the 'bronze_layer' database from external CSV files.
+    It performs the following actions:
+    - Truncates the bronze_layer tables before loading data. 
+    - Uses the 'LOAD DATA LOCAL INFILE' command to load data from CSV Files to 
+	  bronze_layer tables.
 ========================================================================================
 */
 
