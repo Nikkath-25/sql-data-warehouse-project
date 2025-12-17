@@ -67,12 +67,12 @@ These insights empower stakeholders with key business metrics, enabling strategi
 
 
 - **datasets**
-  - [crm_cust_info.csv](data/bronze.crm_cust_info.csv)
-  - [crm_prd_info.csv](data/bronze.crm_prd_info.csv)
-  - [crm_sales_details.csv](data/bronze.crm_sales_details.csv)
-  - [erp_cust_az12.csv](data/bronze.erp_cust_az12.csv)
-  - [erp_loc_a101.csv](data/bronze.erp_loc_a101.csv)
-  - [er_px_cat_g1v2.csv](data/bronze.erp_px_cat_g1v2.csv)
+  - [crm_cust_info.csv](datasets/bronze.crm_cust_info.csv)
+  - [crm_prd_info.csv](datasets/bronze.crm_prd_info.csv)
+  - [crm_sales_details.csv](datasets/bronze.crm_sales_details.csv)
+  - [erp_cust_az12.csv](datasets/bronze.erp_cust_az12.csv)
+  - [erp_loc_a101.csv](datasets/bronze.erp_loc_a101.csv)
+  - [er_px_cat_g1v2.csv](datasets/bronze.erp_px_cat_g1v2.csv)
 
 - **scripts**
   
@@ -122,19 +122,16 @@ These insights empower stakeholders with key business metrics, enabling strategi
     - [quality_checks_fact_sales.sql](tests/gold/quality_checks_crm_fact_sales.sql)
 
 - **docs**
-  - [data catalog (md)](docs/data_catalog.md)
+  
+  - [Data Catalog](docs/data_catalog.md)
 
-  - [Data Flow Diagram (drawio)](docs/Data_Flow_Diagram.drawio)
-  - ![Data Flow Diagram (png)](docs/Data_Flow_Diagram.png)
+  - ![Data Flow Diagram](docs/Data_Flow_Diagram.png)
 
-  - [Data Integration Model (Silver) (drawio)](docs/Data_Integration_Model(Silver).drawio)
-  - ![Data Integration Model (Silver) (png)](docs/Data_Integration_Model(Silver).png)
+  - ![Data Integration Model (Silver)](docs/Data_Integration_Model%28Silver%29.png)
 
-  - [Labelling Original Data Model (Gold) (drawio)](docs/Data_Integration_Model(Silver).drawio)
-  - ![Labelling Original Data Model (Gold) (png)](docs/Data_Integration_Model(Silver).png)
- 
-  - [Gold Layer Sales Star Schema Model (drawio)](docs/Data_Integration_Model(Silver).drawio)
-  - ![Gold Layer Sales Star Schema Model (png)](docs/Data_Integration_Model(Silver).png)
+  - ![Labelling Original Data Model (Gold)](docs/Labelling_Original_Data_Model%28Gold%29.png)
+
+  - ![Gold Layer Sales Star Schema Model](docs/Gold_Layer_Sales_Star_Schema_Model.png)
 
 
 - [README.md](README.md)
