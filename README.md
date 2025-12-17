@@ -63,6 +63,14 @@ These insights empower stakeholders with key business metrics, enabling strategi
 
 ---
 
+## 🏛️ Data Architecture
+
+The data architecture for this project follows Medallion Architecture Bronze, Silver, and Gold Layers:
+
+  - [High Level Architecture](docs/High_Level_Architecture.png)
+
+---
+
 ## 📂 Repository Structure
 
 
@@ -78,23 +86,24 @@ These insights empower stakeholders with key business metrics, enabling strategi
   
   - [init_database.sql](scripts/init_database.sql)
 
-    - **bronze**
-      - [ddl_bronze.sql](scripts/bronze/ddl_bronze.sql)
-      - [load_bronze.sql](scripts/bronze/load_bronze.sql)
-      
-   - **silver**
-      - [ddl_silver.sql](scripts/bronze/ddl_silver.sql)
-      - [load_crm_cust_info.sql](scripts/silver/load_crm_cust_info.sql)
-      - [load_crm_prd_info.sql](scripts/silver/load_crm_prd_info.sql)
-      - [load_crm_sales_details.sql](scripts/silver/load_crm_sales_details.sql)
-      - [load_erp_cust_az12.sql](scripts/silver/load_erp_cust_az12.sql)
-      - [load_erp_loc_a101.sql](scripts/silver/load_erp_loc_a101.sql)
-      - [load_erp_px_cat_g1v2.sql](scripts/silver/load_erp_px_cat_g1v2.sql)
 
-    - **gold**
-      - [ddl_gold_dim_customers](scripts/gold/ddl_gold_dim_customers.sql)
-      - [ddl_gold_dim_products](scripts/gold/ddl_gold_dim_products.sql)
-      - [ddl_gold_fact_sales](scripts/gold/ddl_gold_fact_sales.sql)
+  - **bronze**
+    - [ddl_bronze.sql](scripts/bronze/ddl_bronze.sql)
+    - [load_bronze.sql](scripts/bronze/load_bronze.sql)
+      
+  - **silver**
+    - [ddl_silver.sql](scripts/bronze/ddl_silver.sql)
+    - [load_crm_cust_info.sql](scripts/silver/load_crm_cust_info.sql)
+    - [load_crm_prd_info.sql](scripts/silver/load_crm_prd_info.sql)
+    - [load_crm_sales_details.sql](scripts/silver/load_crm_sales_details.sql)
+    - [load_erp_cust_az12.sql](scripts/silver/load_erp_cust_az12.sql)
+    - [load_erp_loc_a101.sql](scripts/silver/load_erp_loc_a101.sql)
+    - [load_erp_px_cat_g1v2.sql](scripts/silver/load_erp_px_cat_g1v2.sql)
+
+  - **gold**
+    - [ddl_gold_dim_customers](scripts/gold/ddl_gold_dim_customers.sql)
+    - [ddl_gold_dim_products](scripts/gold/ddl_gold_dim_products.sql)
+    - [ddl_gold_fact_sales](scripts/gold/ddl_gold_fact_sales.sql)
 
 - **tests**
   
@@ -125,11 +134,15 @@ These insights empower stakeholders with key business metrics, enabling strategi
   
   - [Data Catalog](docs/data_catalog.md)
 
+  
   - ![Data Flow Diagram](docs/Data_Flow_Diagram.png)
+
 
   - ![Data Integration Model (Silver)](docs/Data_Integration_Model%28Silver%29.png)
 
+
   - ![Labelling Original Data Model (Gold)](docs/Labelling_Original_Data_Model%28Gold%29.png)
+  
 
   - ![Gold Layer Sales Star Schema Model](docs/Gold_Layer_Sales_Star_Schema_Model.png)
 
