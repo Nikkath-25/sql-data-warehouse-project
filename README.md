@@ -40,7 +40,7 @@ Develop a modern data warehouse using SQL Server to consolidate sales data,enabl
 
 - **Scope**: Focus on the latest dataset only; historization of data is not required.
 
-- **Documentation**: Provide clear documentaion of the data model to support both business stakeholders and analytics tyeams.
+- **Documentation**: Provide clear documentaion of the data model to support both business stakeholders and analytics teams.
 
 
 ---
@@ -67,7 +67,7 @@ These insights empower stakeholders with key business metrics, enabling strategi
 
 The data architecture for this project follows Medallion Architecture Bronze, Silver, and Gold Layers:
 
-  - [High Level Architecture](docs/High_Level_Architecture.png)
+  - ![High Level Architecture](docs/High_Level_Architecture.png)
 
 ---
 
